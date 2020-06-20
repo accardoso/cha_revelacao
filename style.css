@@ -26,6 +26,11 @@ body {
     text-align: center;
 }
 
+#home .body {
+    margin-top: 30px;
+    text-align: center;
+}
+
 #home .button {
     background: #eee;
     background: linear-gradient(#eee, #aaa);
@@ -38,7 +43,7 @@ body {
     display: table;
     font-weight: bold;
     padding: 10px 20px;
-    margin: 10% auto;
+    margin: 5% auto;
 }
 
 .h {

@@ -28,11 +28,11 @@ window.onload = function() {
 
 // Start game
 function startGameBoyGirl() {
-    word = [["A B C","Eu sou ..."]]
+    word = [["B","Eu sou ..."]]
     newGame()
 }
 function startGameName() {
-    word = [["A","Meu nome é ..."]]
+    word = [["A B","Meu nome é ..."]]
     newGame()
 }
 
@@ -106,7 +106,7 @@ function bTas(a) {
         a.setAttribute("data", x)
         if(x) {
             if(wordLeft.length == 0) {
-                gameEnd(true)
+                gameEnd()
             }
         }
     }
@@ -133,11 +133,9 @@ function typeWord(e) {
 }
 
 // Game result
-function gameEnd(e) {
-    var d = gId("result")
-    d.setAttribute("data", e)
+function gameEnd() {
     gId("rT").innerText = word[select][0]
-    d.className = ""
+    gId("result").className = ""
 }
 
 // Reset game

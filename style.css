@@ -1,14 +1,16 @@
+/* Coloer Picker: https://www.w3schools.com/colors/colors_picker.asp */
+
 body {
     background-color: #eee;
     margin: 0;
 }
 
 #home {
-    background: linear-gradient(#eee, #aaa);
-    background: -webkit-linear-gradient(top, #eee, #aaa);
-    background: -ms-linear-gradient(top, #eee, #aaa);
-    background: -moz-linear-gradient(top, #eee, #aaa);
-    background: -o-linear-gradient(top, #eee, #aaa);
+    background: linear-gradient(#ff99cc, #eee 50%, #6699ff);
+    background: -webkit-linear-gradient(left, #ff99cc , #eee 50%, #6699ff);
+    background: -ms-linear-gradient(left, #ff99cc, #eee 50%, #6699ff);
+    background: -moz-linear-gradient(left, #ff99cc, #eee 50%, #6699ff);
+    background: -o-linear-gradient(left, #ff99cc, #eee 50%, #6699ff);
     bottom: 0;
     left: 0;
     position: absolute;
@@ -20,19 +22,19 @@ body {
 #home .title {
     font-size: 48px;
     font-weight: bold;
-    margin-top: 15%;
+    margin-top: 10%;
     text-align: center;
 }
 
 #home .button {
-    background: #afa;
-    background: linear-gradient(#afa, #6f6);
-    background: -webkit-linear-gradient(top, #afa, #6f6);
-    background: -ms-linear-gradient(top, #afa, #6f6);
-    background: -moz-linear-gradient(top, #afa, #6f6);
-    background: -o-linear-gradient(top, #afa, #6f6);
+    background: #eee;
+    background: linear-gradient(#eee, #aaa);
+    background: -webkit-linear-gradient(top, #eee, #aaa);
+    background: -ms-linear-gradient(top, #eee, #aaa);
+    background: -moz-linear-gradient(top, #eee, #aaa);
+    background: -o-linear-gradient(top, #eee, #aaa);
     border-radius: 2px;
-    box-shadow: 0 0 0 5px #090;
+    box-shadow: 0 0 0 5px #999;
     display: table;
     font-weight: bold;
     padding: 10px 20px;
@@ -44,27 +46,18 @@ body {
 }
 
 #result {
-    background: #700;
-    background: linear-gradient(rgba(125, 0, 0, 0.9) 20%, rgba(0, 0, 0, 0.7) 80%);
-    background: -webkit-linear-gradient(top, rgba(125, 0, 0, 0.9) 20%, rgba(0, 0, 0, 0.7) 80%);
-    background: -ms-linear-gradient(top, rgba(125, 0, 0, 0.9) 20%, rgba(0, 0, 0, 0.7) 80%);
-    background: -moz-linear-gradient(top, rgba(125, 0, 0, 0.9) 20%, rgba(0, 0, 0, 0.7) 80%);
-    background: -o-linear-gradient(top, rgba(125, 0, 0, 0.9) 20%, rgba(0, 0, 0, 0.7) 80%);
+    background: #007;
+      background: linear-gradient(rgba(0, 0, 255, 0.9) 20%, rgba(0, 0, 180, 0.7) 80%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 255, 0.9) 20%, rgba(0, 0, 180, 100) 80%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 255, 0.9) 20%, rgba(0, 0, 180, 0.7) 80%);
+    background: -moz-linear-gradient(top, rgba(0, 0, 255, 0.9) 20%, rgba(0, 0, 180, 0.7) 80%);
+    background: -o-linear-gradient(top, rgba(0, 0, 255, 0.9) 20%, rgba(0, 0, 180, 0.7) 80%);
     bottom: 0;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 100;
-}
-
-#result[data="true"] {
-    background: #070;
-    background: linear-gradient(rgba(0, 125, 0, 0.9) 20%, rgba(0, 0, 0, 0.7) 80%);
-    background: -webkit-linear-gradient(top, rgba(0, 125, 0, 0.9) 20%, rgba(0, 0, 0, 0.7) 80%);
-    background: -ms-linear-gradient(top, rgba(0, 125, 0, 0.9) 20%, rgba(0, 0, 0, 0.7) 80%);
-    background: -moz-linear-gradient(top, rgba(0, 125, 0, 0.9) 20%, rgba(0, 0, 0, 0.7) 80%);
-    background: -o-linear-gradient(top, rgba(0, 125, 0, 0.9) 20%, rgba(0, 0, 0, 0.7) 80%);
 }
 
 #result .title {
@@ -83,24 +76,24 @@ body {
 }
 
 #result .button {
-    background:#afa;
-    background: linear-gradient(#afa, #6f6);
-    background: -webkit-linear-gradient(top, #afa, #6f6);
-    background: -ms-linear-gradient(top, #afa, #6f6);
-    background: -moz-linear-gradient(top, #afa, #6f6);
-    background: -o-linear-gradient(top, #afa, #6f6);
+    background: #aaf;
+    background: linear-gradient(#aaf, #66f);
+    background: -webkit-linear-gradient(top, #aaf, #66f);
+    background: -ms-linear-gradient(top, #aaf, #66f);
+    background: -moz-linear-gradient(top, #aaf, #66f);
+    background: -o-linear-gradient(top, #aaf, #66f);
     border-radius: 2px;
-    box-shadow: 0 0 0 5px #090;
+    box-shadow: 0 0 0 5px #009;
     display: table;
     font-weight: bold;
     padding: 10px 20px;
-    margin: 40px auto;
+    margin: 250px auto;
     margin-bottom: 0;
 }
 
 #letter {
-    font-size: 22px;
-    height: 30px;
+    font-size: 60px;
+    height: 60px;
     margin: 20px;
     text-align: center;
 }
@@ -109,14 +102,14 @@ body {
     box-shadow: 0 3px 0 -1px #555;
     display: inline-block;
     margin: 1px;
-    height: 20px;
+    height: 60px;
     text-transform: uppercase;
-    width: 20px;
+    width: 60px;
 }
 
 .ls {
     box-shadow: 0 0 0 0 #555;
-    width: 10px;
+    width: 25px;
 }
 
 #game {
@@ -130,7 +123,7 @@ body {
     font-weight: bold;
     margin-top: 5%;
     text-align: center;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
 }
 
 #tastatur {

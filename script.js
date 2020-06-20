@@ -28,11 +28,13 @@ window.onload = function() {
 
 // Start game
 function startGameBoyGirl() {
-    word = [["B","Eu sou ..."]]
+    word = [["Ab    Ac", "Eu sou um Menin_!"]]
+    gId("question").innerText = "Menino ou Menina?"
     newGame()
 }
 function startGameName() {
-    word = [["A B","Meu nome é ..."]]
+    word = [["Abc", "Meu nome é Abc"]]
+    gId("question").innerText = "Meu nome é ..."
     newGame()
 }
 
@@ -40,7 +42,6 @@ function startGameName() {
 function newGame() {
     gId("home").className = "h"
     gId("result").className = "h"
-    gId("question").innerText = word[0][1]
 
     clearTastatur()
     createWord()
@@ -134,7 +135,8 @@ function typeWord(e) {
 
 // Game result
 function gameEnd() {
-    gId("rT").innerText = word[select][0]
+    gId("rT").innerText = word[select][1]
+    gId("rB").innerText = word[select][0]
     gId("result").className = ""
 }
 

@@ -43,7 +43,7 @@ body {
     display: table;
     font-weight: bold;
     padding: 10px 20px;
-    margin: 5% auto;
+    margin: 8% auto;
 }
 
 .h {
@@ -75,7 +75,8 @@ body {
 
 #result .body {
     color: #fff;
-    margin-top: 30px;
+    font-size: 25px;
+    margin-top: 10%;
     text-align: center;
     text-shadow: 1px 1px 0 #000;
 }
@@ -92,7 +93,7 @@ body {
     display: table;
     font-weight: bold;
     padding: 10px 20px;
-    margin: 250px auto;
+    margin: 200px auto;
     margin-bottom: 0;
 }
 

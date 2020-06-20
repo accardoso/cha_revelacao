@@ -1,6 +1,6 @@
 // Word selection
 // New word = ["Word name", "Hint"]
-var word = [["Alexandre Cançado Cardoso"]]
+var word = [["",""]]
 
 // Game keyboard
 var tastatur = "ABCDEFGHIJKLMNOPQRSTUVWXYZÇ"
@@ -8,7 +8,6 @@ var tastatur = "ABCDEFGHIJKLMNOPQRSTUVWXYZÇ"
 // Game memory
 var select = 0
 var wordLeft = []
-var fail = 0
 
 // Web-page onload
 window.onload = function() {
@@ -28,17 +27,24 @@ window.onload = function() {
 }
 
 // Start game
-function startGame() {
-    gId("home").className = "h"
-    gId("result").className = "h"
+function startGameBoyGirl() {
+    word = [["A B C","Eu sou ..."]]
+    newGame()
+}
+function startGameName() {
+    word = [["A","Meu nome é ..."]]
     newGame()
 }
 
 // New game
 function newGame() {
+    gId("home").className = "h"
+    gId("result").className = "h"
+    gId("question").innerText = word[0][1]
+
     clearTastatur()
-    clearPlayer()
     createWord()
+    // clearHint()
 }
 
 // Clear keyboard
@@ -49,30 +55,18 @@ function clearTastatur() {
     }
 }
 
-// Clear player
-function clearPlayer() {
-    fail = 0
-    wordLeft = []
-    // gId("g0").setAttribute("data", "false")
-    // gId("g1").setAttribute("data", "false")
-    // gId("g2").setAttribute("data", "false")
-    // gId("g3").setAttribute("data", "false")
-    // gId("g4").setAttribute("data", "false")
-    // gId("g5").setAttribute("data", "false")
-    // gId("g5").setAttribute("r", "false")
-    // gId("g5").setAttribute("l", "false")
-    // gId("g6").setAttribute("data", "false")
-    // gId("g6").setAttribute("l", "false")
-    // gId("g6").setAttribute("r", "false")
-    gId("hintButton").setAttribute("data", "false")
-    gId("hint").style.display = "none"
-}
+// // Clear hint
+// function clearHint() {
+//     gId("hintButton").setAttribute("data", "false")
+//     gId("hint").style.display = "none"
+// }
 
 // Get new word
 function createWord() {
+    wordLeft = []
     var d = gId("letter")
     d.innerHTML = ""
-    select = Math.floor(Math.random() * word.length)
+    select = 0 //Math.floor(Math.random() * word.length)
     for(a = 0; a < word[select][0].length; a++) {
         var x = word[select][0][a].toUpperCase()
         var b = document.createElement("span")
@@ -114,8 +108,6 @@ function bTas(a) {
             if(wordLeft.length == 0) {
                 gameEnd(true)
             }
-        } else {
-            showNextFail()
         }
     }
 }
@@ -132,55 +124,6 @@ function isExist(e) {
     return false
 }
 
-// Show next fail drawing
-function showNextFail() {
-    fail++
-    // switch(fail) {
-    //     case 1:
-    //         gId("g0").setAttribute("data", "true")
-    //         break;
-    //
-    //     case 2:
-    //         gId("g1").setAttribute("data", "true")
-    //         break;
-    //
-    //     case 3:
-    //         gId("g2").setAttribute("data", "true")
-    //         break;
-    //
-    //     case 4:
-    //         gId("g3").setAttribute("data", "true")
-    //         gId("hintButton").setAttribute("data", "true")
-    //         break;
-    //
-    //     case 5:
-    //         gId("g4").setAttribute("data", "true")
-    //         break;
-    //
-    //     case 6:
-    //         gId("g5").setAttribute("data", "true")
-    //         break;
-    //
-    //     case 7:
-    //         gId("g5").setAttribute("l", "true")
-    //         break;
-    //
-    //     case 8:
-    //         gId("g5").setAttribute("r", "true")
-    //         break;
-    //
-    //     case 9:
-    //         gId("g6").setAttribute("data", "true")
-    //         gId("g6").setAttribute("l", "true")
-    //         break;
-    //
-    //     case 10:
-    //         gId("g6").setAttribute("r", "true")
-    //         gameEnd(false)
-    //         break;
-    // }
-}
-
 function typeWord(e) {
     for(a = 0; a < word[select][0].length; a++) {
         if(word[select][0][a].toUpperCase() == e) {
@@ -193,26 +136,27 @@ function typeWord(e) {
 function gameEnd(e) {
     var d = gId("result")
     d.setAttribute("data", e)
-    if(e) {
-        gId("rT").innerText = "You Win!"
-        gId("rM").innerHTML = "Congratulations, you found the word!<br/><br/>Good Job!"
-    } else {
-        gId("rT").innerText = "You Lose!"
-        gId("rM").innerHTML = "The word was <br/><br/>\"" + word[select][0].toUpperCase() + "\"<br/><br/>Better luck next time."
-    }
+    gId("rT").innerText = word[select][0]
     d.className = ""
 }
 
-// Show hint
-function hint() {
-    gId("hintText").innerText = word[select][1]
-    gId("hint").style.display = "block"
+// Reset game
+function restartGame() {
+    word = [["",""]]
+    gId("home").className = ""
+    gId("result").className = "h"
 }
 
-// Exit hint
-function hintExit() {
-    gId("hint").style.display = "none"
-}
+// // Show hint
+// function hint() {
+//     gId("hintText").innerText = word[select][1]
+//     gId("hint").style.display = "block"
+// }
+
+// // Exit hint
+// function hintExit() {
+//     gId("hint").style.display = "none"
+// }
 
 // Get HTML ID element by name
 function gId(a) {

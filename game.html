@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Inspirado em: https://code.sololearn.com/WyyBylG1NvdU/#css-->
+<html t="0x31" i="YA-9517" v="1.60">
+    <head>
+				<meta charset="utf-8">
+        <title>Game da Revelação</title>
+				<link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="home">
+            <div class="title">Game da Revelação</div>
+						<div class="button anim" onclick="startGameBoyGirl()">Eu sou ...</div>
+						<div class="button anim" onclick="startGameName()">Meu nome é ...</div>
+        </div>
+        <div id="result" class="h">
+						<div class="title" id="rT"></div>
+            <div class="button anim" onclick="restartGame()">Novo Game!</div>
+        </div>
+        <div id="pGame">
+						<div class="title" id="question">Ab</div>
+						<!-- <div class="hintButton" data="false" id="hintButton" onclick="hint()">?</div> -->
+						<!-- <div id="game"></div> -->
+						<div id="letter"></div>
+            <div id="tastatur">
+                <div id="moveKeybord"><div class="marg"></div></div>
+                <div id="keybord"></div>
+            </div>
+            <!-- <div class="hint" id="hint">
+                <div class="title">Hint<div class="exit" onclick="hintExit()">X</div></div>
+                <div class="body" id="hintText"></div>
+            </div> -->
+        </div>
+				<script src="script.js"></script>
+    </body>
+</html>

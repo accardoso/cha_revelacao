@@ -1,4 +1,4 @@
-/* Coloer Picker: https://www.w3schools.com/colors/colors_picker.asp */
+/* Color Picker: https://www.w3schools.com/colors/colors_picker.asp */
 
 body {
     background-color: #eee;
@@ -22,7 +22,7 @@ body {
 #home .title {
     font-size: 48px;
     font-weight: bold;
-    margin-top: 10%;
+    margin-top: 8%;
     text-align: center;
 }
 
@@ -52,7 +52,7 @@ body {
 
 #result {
     background: #007;
-      background: linear-gradient(rgba(0, 0, 255, 0.9) 20%, rgba(0, 0, 180, 0.7) 80%);
+    background: linear-gradient(rgba(0, 0, 255, 0.9) 20%, rgba(0, 0, 180, 0.7) 80%);
     background: -webkit-linear-gradient(top, rgba(0, 0, 255, 0.9) 20%, rgba(0, 0, 180, 100) 80%);
     background: -ms-linear-gradient(top, rgba(0, 0, 255, 0.9) 20%, rgba(0, 0, 180, 0.7) 80%);
     background: -moz-linear-gradient(top, rgba(0, 0, 255, 0.9) 20%, rgba(0, 0, 180, 0.7) 80%);

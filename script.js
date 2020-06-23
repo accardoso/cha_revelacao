@@ -1,5 +1,4 @@
 // Word selection
-// New word = ["Word name", "Hint"]
 var word = [["",""]]
 
 // Game keyboard
@@ -28,12 +27,12 @@ window.onload = function() {
 
 // Start game
 function startGameBoyGirl() {
-    word = [["Ab    Ac", "Eu sou um Menin_!"]]
+    word = [["Cavaleiro    Autorama", "Eu sou um Menino!"]]
     gId("question").innerText = "Menino ou Menina?"
     newGame()
 }
 function startGameName() {
-    word = [["Abc", "Meu nome é Abc"]]
+    word = [["Arthur", "Meu nome é Arthur!"]]
     gId("question").innerText = "Meu nome é ..."
     newGame()
 }
@@ -45,7 +44,6 @@ function newGame() {
 
     clearTastatur()
     createWord()
-    // clearHint()
 }
 
 // Clear keyboard
@@ -55,12 +53,6 @@ function clearTastatur() {
         e[a].setAttribute("data", "")
     }
 }
-
-// // Clear hint
-// function clearHint() {
-//     gId("hintButton").setAttribute("data", "false")
-//     gId("hint").style.display = "none"
-// }
 
 // Get new word
 function createWord() {
@@ -146,17 +138,6 @@ function restartGame() {
     gId("home").className = ""
     gId("result").className = "h"
 }
-
-// // Show hint
-// function hint() {
-//     gId("hintText").innerText = word[select][1]
-//     gId("hint").style.display = "block"
-// }
-
-// // Exit hint
-// function hintExit() {
-//     gId("hint").style.display = "none"
-// }
 
 // Get HTML ID element by name
 function gId(a) {
